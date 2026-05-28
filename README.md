@@ -4,7 +4,7 @@
 Moderni ja visuaalisesti miellyttävä inventaario- ja lainausjärjestelmä. Sovellus mahdollistaa laitteiden hallinnan, lainaamisen ja seurannan. Kehitetty oppilaitoksen tarpeisiin.
 
 ## Käyttäjäroolit
-- **Admin** — täydet oikeudet (laitteiden lisäys, muokkaus, poisto)
+- **Admin** — täydet oikeudet
 - **User** — voi selata laitteita ja lainata niitä
 
 ## Teknologiat
@@ -20,13 +20,13 @@ Moderni ja visuaalisesti miellyttävä inventaario- ja lainausjärjestelmä. Sov
 - `/database/` — tietokannan rakenne
 
 ## Valmiit ominaisuudet
-- ✅ Käyttäjän kirjautuminen ja sessioiden hallinta
-- ✅ Moderni tumma käyttöliittymä (hyvä visuaalinen ilme)
-- ✅ Laitteiden listaaminen (`devices.php`)
-- ✅ Uuden laitteen lisääminen (`add_device.php`)
-- ✅ Navigointi navbarilla
-- ✅ Logout-toiminto
-- ✅ Perus CRUD-toiminnot laitteille (lisäys, lista, edit, delete, borrow, return)
+-  Käyttäjän kirjautuminen ja sessioiden hallinta
+-  Moderni tumma käyttöliittymä
+-  Laitteiden listaaminen
+-  Uuden laitteen lisääminen
+-  Navigointi navbarilla
+-  Logout-toiminto
+-  Perus CRUD-toiminnot laitteille
 
 ## Backlog / Kehityskohteet
 - Täysi lainaus- ja palautuslogiikka

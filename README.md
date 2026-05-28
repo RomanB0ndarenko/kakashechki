@@ -1,6 +1,4 @@
-# 📦 Inventaario - Laitteiden hallinta- ja lainausjärjestelmä
-
-**Repository:** [RomanB0ndarenko/kakashechki](https://github.com/RomanB0ndarenko/kakashechki)
+#  Inventaario - Laitteiden hallinta- ja lainausjärjestelmä
 
 ## Projektin kuvaus
 Moderni ja visuaalisesti miellyttävä inventaario- ja lainausjärjestelmä. Sovellus mahdollistaa laitteiden hallinnan, lainaamisen ja seurannan. Kehitetty oppilaitoksen tarpeisiin.
@@ -50,7 +48,7 @@ Moderni ja visuaalisesti miellyttävä inventaario- ja lainausjärjestelmä. Sov
 
 ## Tiimi
 - **Roman Bondarenko** — UI/UX, CSS, dokumentaatio, GitHub
-- **Artem** — Backend (PHP + MySQL)
+- **Artem Yefremov** — Backend (PHP + MySQL)
 
 ## Asennusohjeet
 
@@ -64,9 +62,3 @@ Moderni ja visuaalisesti miellyttävä inventaario- ja lainausjärjestelmä. Sov
 ## Testaus
 - Kirjaudu sisään admin-tunnuksella
 - Testaa laitteiden lisäys ja listaaminen
-
----
-
-Скопируй этот текст полностью и замени им содержимое `README.md` в репозитории.
-
-Хочешь, я сделаю ещё отдельный файл `RETROSPEKTIIVI.md`?

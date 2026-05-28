@@ -57,7 +57,7 @@ Moderni ja visuaalisesti miellyttävä inventaario- ja lainausjärjestelmä. Sov
 3. Luo tietokanta nimellä `invetory_system` (tai vastaava)
 4. Importtaa tietokannan rakenne `/database/`-kansiosta
 5. Käynnistä Apache + MySQL
-6. Avaa selaimessa: `http://localhost/kakashechki`
+6. Avaa selaimessa: `http://localhost/inventory`
 
 ## Testaus
 - Kirjaudu sisään admin-tunnuksella

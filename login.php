@@ -1,33 +1,80 @@
+<?php
+session_start();
+
+include 'config/database.php';
+
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+
+    $sql = "SELECT * FROM users WHERE username='$username'";
+
+    $result = $conn->query($sql);
+
+    if ($result->num_rows > 0) {
+
+        $user = $result->fetch_assoc();
+
+        // temporary password check
+        if ($password == "admin") {
+
+            $_SESSION['user_id'] = $user['id'];
+            $_SESSION['username'] = $user['username'];
+            $_SESSION['role'] = $user['role'];
+
+            header("Location: index.php");
+            exit();
+        }
+    }
+
+    echo "<p style='color:red;'>Wrong username or password</p>";
+}
+?>
+
 <!DOCTYPE html>
-<html lang="fi">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inventaario - Kirjautuminen</title>
-    <link rel="stylesheet" href="../assets/style.css">
+
+    <title>Login</title>
+
+    <link rel="stylesheet" href="assets/css/style.css">
+
 </head>
 <body>
-    <div class="login-container">
-        <div class="card" style="width: 100%; max-width: 420px;">
-            <h2 style="text-align: center; margin-bottom: 25px; font-size: 2rem;">🔑 Inventaario</h2>
-            <p style="text-align: center; color: #94a3b8; margin-bottom: 30px;">Laitteiden hallinta- ja lainausjärjestelmä</p>
-            
-            <?php if(isset($error)): ?>
-                <p style="color: #f87171; text-align: center; margin-bottom: 15px;"><?= $error ?></p>
-            <?php endif; ?>
 
-            <form method="POST">
-                <input type="text" name="username" placeholder="Käyttäjätunnus" required 
-                       style="width: 100%; padding: 14px; margin-bottom: 15px; background: #334155; border: none; border-radius: 8px; color: white;">
-                
-                <input type="password" name="password" placeholder="Salasana" required 
-                       style="width: 100%; padding: 14px; margin-bottom: 25px; background: #334155; border: none; border-radius: 8px; color: white;">
-                
-                <button type="submit" class="btn btn-primary" style="width: 100%; padding: 14px; font-size: 1.1rem;">
-                    Kirjaudu sisään
-                </button>
-            </form>
-        </div>
-    </div>
+<div class="login-box">
+
+    <h1>Inventory Login</h1>
+
+    <br>
+
+    <form method="POST">
+
+        <input
+            type="text"
+            name="username"
+            placeholder="Username"
+            required
+        >
+
+        <input
+            type="password"
+            name="password"
+            placeholder="Password"
+            required
+        >
+
+        <button type="submit">
+            Login
+        </button>
+
+    </form>
+
+</div>
+
 </body>
 </html>
